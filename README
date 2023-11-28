@@ -1,0 +1,7 @@
+This is a small demo made for a test as part of a hiring process for a developer role.
+
+main.py creates an api with two calls, one GET and one POST. Run using "uvicorn main:app --reload" while in the directory.
+
+test_main.py defines some sample unit tests. Run using "pytest".
+
+Required packages to run are fastapi, uvicorn[standard], httpx and pytest for the unit tests. All available through pip.
