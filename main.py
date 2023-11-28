@@ -25,6 +25,5 @@ async def list_folder(item: ListFolder):
     result = subprocess.run(['ls',item.folder_name],capture_output=True,text=True)
     if result.returncode != 0:
         raise HTTPException(status_code=404, detail=''.join(result.stderr.splitlines()))
-        #raise HTTPException(status_code=404, detail="No folder named "+item.folder_name)
     
     return {"folder_content": result.stdout.splitlines()}
